@@ -25,11 +25,11 @@ Then, we scale the data points comprising the synthetic image by factors determi
 
  Finally, we convert the result back to **RGB**.
  
-#### Results
+### Results
 ---
 ![alt result](color_transfer_result.jpg)
 
-#### Usage
+### Usage
 ---
 This code is written in **MATLAB**. Change the source and target image in source and target variable respectively in the 3<sup>rd</sup> and 4<sup>th</sup> line of ***color_transfer_built.m*** file.
 
