@@ -16,15 +16,21 @@ Convert RGB color space to **ℓαβ** color space beacause of its **decorrelata
 #### Statistics and color correction
 First, we subtract the **mean** from the data points on each channel respectively:
 
-![image](http://www.sciweavers.org/tex2img.php?eq=%24%5Cell%5E%2A%20%3D%20%5Cell%20-%20%5Clangle%20%5Cell%20%5Crangle%5C%5C%0A%5Calpha%5E%2A%20%3D%20%5Calpha%20-%20%5Clangle%20%5Calpha%20%5Crangle%5C%5C%20%5C%5C%0A%5Cbeta%5E%2A%20%3D%20%5Cbeta%20-%20%5Clangle%20%5Cbeta%20%5Crangle%5C%5C&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0)
+<img src="https://latex.codecogs.com/gif.latex?\ell^*&space;=&space;\ell&space;-&space;\langle&space;\ell&space;\rangle" title="\ell^* = \ell - \langle \ell \rangle" />
+
+<img src="https://latex.codecogs.com/gif.latex?\alpha^*&space;=&space;\alpha&space;-&space;\langle&space;\alpha&space;\rangle" title="\alpha^* = \alpha - \langle \alpha \rangle" />
+
+<img src="https://latex.codecogs.com/gif.latex?\beta^*&space;=&space;\beta&space;-&space;\langle&space;\beta&space;\rangle" title="\beta^* = \beta - \langle \beta \rangle" />
 
 Then, we scale the data points comprising the synthetic image by factors determined by the respective standard deviations:
 
+<img src="https://latex.codecogs.com/gif.latex?\large&space;\ell^{'}&space;=&space;\frac{\sigma^{\ell}_t}{\sigma^{\ell}_s}\ell^*" title="\large \ell^{'} = \frac{\sigma^l_t}{\sigma^l_s}\ell^*" />
 
-![img](http://www.sciweavers.org/tex2img.php?eq=%5Cell%5E%7B%27%7D%3D%5Cfrac%7B%5Csigma_t%5E%7B%5Cell%7D%7D%7B%5Csigma_s%5E%7B%5Cell%7D%7D%5Cell%5E%2A%5C%5C%20%5C%5C%20%5C%5C%0A%5Calpha%5E%7B%27%7D%3D%5Cfrac%7B%5Csigma_t%5E%7B%5Calpha%7D%7D%7B%5Csigma_s%5E%7B%5Calpha%7D%7D%5Calpha%5E%2A%5C%5C%20%5C%5C%20%5C%5C%0A%5Cbeta%5E%7B%27%7D%3D%5Cfrac%7B%5Csigma_t%5E%7B%5Cbeta%7D%7D%7B%5Csigma_s%5E%7B%5Cbeta%7D%7D%5Cbeta%5E2A&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0)
+<img src="https://latex.codecogs.com/gif.latex?\large&space;\alpha^{'}&space;=&space;\frac{\sigma^{\alpha}_t}{\sigma^{\alpha}_s}\alpha^*" title="\large \alpha^{'} = \frac{\sigma^{\alpha}_t}{\sigma^{\alpha}_s}\alpha^*" />
 
- Finally, we convert the result back to **RGB**.
- 
+<img src="https://latex.codecogs.com/gif.latex?\large&space;\beta^{'}&space;=&space;\frac{\sigma^{\beta}_t}{\sigma^{\beta}_s}\beta^*" title="\large \beta^{'} = \frac{\sigma^{\beta}_t}{\sigma^{\beta}_s}\beta^*" />
+
+Finally, we convert the result back to **RGB**.
 ### Results
 ---
 ![alt result](color_transfer_result.jpg)
